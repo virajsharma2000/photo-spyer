@@ -20,8 +20,11 @@ jobs:
     - name: Install opencv
       run: pip install opencv-python
       
+    - name: Install gtts
+      run: pip install gtts
+      
     - name: Build EXE
-      run: pyinstaller --onefile photo_spyer.py --hidden-import=cv2
+      run: pyinstaller --onefile photo_spyer.py --hidden-import=gtts
 
     - name: Upload EXE
       uses: actions/upload-artifact@v4
