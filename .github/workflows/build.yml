@@ -16,7 +16,10 @@ jobs:
 
     - name: Install PyInstaller
       run: pip install pyinstaller
-
+    
+    - name: Install opencv
+      run: pip install opencv-python
+      
     - name: Build EXE
       run: pyinstaller --onefile photo_spyer.py --hidden-import=cv2
 
