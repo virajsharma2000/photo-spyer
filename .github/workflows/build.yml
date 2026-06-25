@@ -19,12 +19,6 @@ jobs:
     
     - name: Install opencv
       run: pip install opencv-python
-      
-    - name: Install gtts
-      run: pip install gtts
-    
-    - name: Install playsound
-      run: pip install playsound
 
     - name: Build EXE
       run: pyinstaller --onefile photo_spyer.py --hidden-import=gtts -hidden-import=playsound
