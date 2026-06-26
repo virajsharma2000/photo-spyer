@@ -8,7 +8,9 @@ cam = cv2.VideoCapture(0)
 
 time.sleep(1)
 
-ret, frame = cam.read()
+for i in range(10):
+ ret, frame = cam.read()
+ 
 cv2.imwrite('stolen_image.jpg', frame)
 
 cam.release()
